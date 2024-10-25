@@ -8,7 +8,7 @@ module.exports = (key, placeid, language) => {
     place_id: placeid,
     language,
     fields:
-      "formatted_address,geometry,icon,name,permanently_closed,photos,place_id,plus_code,types,opening_hours,price_level,rating,user_ratings_total,reviews",
+      "formatted_address,formatted_phone_number,current_opening_hours,geometry,icon,name,permanently_closed,photos,place_id,plus_code,types,opening_hours,price_level,rating,user_ratings_total,reviews",
   };
   try {
     return axios.get(`${baseUri}?${querystring.stringify(parameters)}`);
